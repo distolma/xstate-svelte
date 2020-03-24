@@ -1,5 +1,4 @@
 <script>
-  import { Machine, assign } from 'xstate';
   import { useMachine } from '../src';
 
   const onFetch = () => new Promise(res => setTimeout(() => res('some data'), 50));
