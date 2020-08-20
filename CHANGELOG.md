@@ -2,6 +2,9 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.0.0
+
+- Drop Node.js v8 support ([fd0e09][https://github.com/distolma/xstate-svelte/commit/fd0e09edc23aeece84174a74b07e398494f1e4bd])
 
 ## 0.1.1
 
