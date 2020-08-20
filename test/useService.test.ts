@@ -1,4 +1,4 @@
-import { render, fireEvent, wait } from '@testing-library/svelte';
+import { render, fireEvent, waitFor } from '@testing-library/svelte';
 import { Machine, assign, interpret } from 'xstate';
 import UseServiceShared from './UseService-shared.svelte';
 import UseService from './UseService.svelte';
@@ -30,9 +30,9 @@ describe('useService function', () => {
 
     counterService.send('INC');
 
-    await wait();
-
-    countEls.forEach(countEl => expect(countEl.textContent).toBe('1'));
+    await waitFor(() => {
+      countEls.forEach(countEl => expect(countEl.textContent).toBe('1'));
+    });
   })
 
   it('service should be updated when it changes', async () => {
@@ -53,6 +53,6 @@ describe('useService function', () => {
     rerender({ props: { service: counterService2 }});
 
     countEl = getByTestId('count');
-    await wait(() => expect(countEl.textContent).toBe('0'));
+    await waitFor(() => expect(countEl.textContent).toBe('0'));
   });
 })

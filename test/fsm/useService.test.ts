@@ -1,4 +1,4 @@
-import { render, wait } from '@testing-library/svelte';
+import { render, waitFor } from '@testing-library/svelte';
 import { createMachine, assign, interpret } from '@xstate/fsm';
 import UseServiceShared from './UseService-shared.svelte';
 
@@ -29,8 +29,8 @@ describe('useService function', () => {
 
     counterService.send('INC');
 
-    await wait();
-
-    countEls.forEach(countEl => expect(countEl.textContent).toBe('1'));
+    await waitFor(() => {
+      countEls.forEach(countEl => expect(countEl.textContent).toBe('1'));
+    });
   })
 })

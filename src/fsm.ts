@@ -8,6 +8,7 @@ import {
 } from '@xstate/fsm';
 
 type XStateSvelteResponse<
+  // eslint-disable-next-line @typescript-eslint/ban-types
   TContext extends object,
   TEvent extends EventObject,
   TState extends Typestate<TContext> = any
@@ -18,6 +19,7 @@ type XStateSvelteResponse<
 }
 
 const getServiceValue = <
+  // eslint-disable-next-line @typescript-eslint/ban-types
   TContext extends object,
   TEvent extends EventObject = EventObject,
   TState extends Typestate<TContext> = any
@@ -34,6 +36,7 @@ const getServiceValue = <
 };
 
 export function useMachine<
+  // eslint-disable-next-line @typescript-eslint/ban-types
   TContext extends object,
   TEvent extends EventObject,
   TState extends Typestate<TContext> = any
@@ -62,6 +65,7 @@ export function useMachine<
 }
 
 export function useService<
+  // eslint-disable-next-line @typescript-eslint/ban-types
   TContext extends object,
   TEvent extends EventObject = EventObject,
   TState extends Typestate<TContext> = any
