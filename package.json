@@ -53,7 +53,7 @@
     "xstate": "^4.9.1"
   },
   "engines": {
-    "node": ">=8.3.0"
+    "node": ">=10"
   },
   "lint-staged": {
     "*.{js,ts}": [
