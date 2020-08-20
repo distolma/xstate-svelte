@@ -33,7 +33,7 @@ type XStateSvelteOptions<
 type XStateSvelteResponse<
   TContext,
   TEvent extends EventObject,
-  TTypestate extends Typestate<TContext> = any
+  TTypestate extends Typestate<TContext> = { value: any; context: TContext }
 > = {
   state: Readable<State<TContext, TEvent, any, TTypestate>>;
   send: Interpreter<TContext, any, TEvent, TTypestate>['send'];
@@ -43,7 +43,7 @@ type XStateSvelteResponse<
 export function useMachine<
   TContext,
   TEvent extends EventObject,
-  TTypestate extends Typestate<TContext> = any
+  TTypestate extends Typestate<TContext> = { value: any; context: TContext }
 >(
   machine: StateMachine<TContext, any, TEvent, TTypestate>,
   options: XStateSvelteOptions<TContext, TEvent> = {}
@@ -73,7 +73,7 @@ export function useMachine<
     ...context
   } as TContext)
 
-  const service = interpret(createdMachine, interpreterOptions).start(
+  const service = interpret<TContext, any, TEvent, TTypestate>(createdMachine, interpreterOptions).start(
     rehydratedState ? State.create(rehydratedState as any) : undefined
   )
 
