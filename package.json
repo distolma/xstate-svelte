@@ -49,7 +49,7 @@
     "svelte-jester": "^1.1.2",
     "svelte-preprocess": "^4.1.1",
     "ts-jest": "^26.2.0",
-    "typescript": "^3.9.7",
+    "typescript": "^4.0.3",
     "xstate": "^4.9.1"
   },
   "engines": {
