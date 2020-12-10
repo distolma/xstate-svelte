@@ -2,7 +2,8 @@
 # xstate-svelte
 
 [![npm version](https://badge.fury.io/js/xstate-svelte.svg)](https://www.npmjs.com/package/xstate-svelte)
-[![Build Status](https://travis-ci.org/distolma/xstate-svelte.svg?branch=master)](https://travis-ci.org/distolma/xstate-svelte)
+[![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fdistolma%2Fxstate-svelte%2Fbadge%3Fref%3Dmaster&style=flat)](https://actions-badge.atrox.dev/distolma/xstate-svelte/goto?ref=master)
+
 
 <img src="https://i.imgur.com/FshbFOv.png" alt="XState" width="150" align="right" />
 
