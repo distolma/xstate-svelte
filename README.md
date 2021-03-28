@@ -1,3 +1,6 @@
+# _Status of this package_
+
+_This package is deprecated. Please use official `@xstate/svelte` instead._
 
 # xstate-svelte
 
